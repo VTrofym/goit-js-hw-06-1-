@@ -21,7 +21,7 @@ function targetInputHandler(event) {
   event.preventDefault();
   const { email, password } = event.currentTarget.elements;
   if (!email.value.trim() || !password.value.trim()) {
-    alert('Fill in all fields, please!');
+    return alert('Fill in all fields, please!');
   }
   const userLoginData = {
     email: email.value,

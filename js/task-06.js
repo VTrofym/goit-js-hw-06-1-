@@ -5,7 +5,6 @@
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 
-
 const refs = {
     inputEl: document.querySelector("#validation-input"),
 };
