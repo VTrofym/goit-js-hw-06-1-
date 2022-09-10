@@ -26,7 +26,20 @@ const refs = {
   btnDestroy: document.querySelector('[data-destroy]')
 }
 
-refs.btnCreate.addEventListener('click', onBtnCreateClick)
+refs.div.addEventListener('click', onBtnClick)
+
+function onBtnClick(event) {
+  const btnEvent = event.target.dataset;
+  if (btnEvent.hasOwnProperty('create')) {
+    return onBtnCreateClick();
+  } else if (btnEvent.hasOwnProperty('destroy')) {
+    onBtnDestroyClick();
+  } else {
+    return;
+  }
+}
+
+// refs.btnCreate.addEventListener('click', onBtnCreateClick)
 
 function onBtnCreateClick() {
   const amount = refs.input.value;
@@ -34,7 +47,8 @@ function onBtnCreateClick() {
   refs.input.value = '';
 }
 
-refs.btnDestroy.addEventListener('click', onBtnDestroyClick);
+// refs.btnDestroy.addEventListener('click', onBtnDestroyClick);
+
 function onBtnDestroyClick() {
   const countInput = refs.input.value;
   if (!countInput || countInput <0) {
