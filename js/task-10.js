@@ -31,7 +31,7 @@ refs.div.addEventListener('click', onBtnClick)
 function onBtnClick(event) {
   const btnEvent = event.target.dataset;
   if (btnEvent.hasOwnProperty('create')) {
-    return onBtnCreateClick();
+    onBtnCreateClick();
   } else if (btnEvent.hasOwnProperty('destroy')) {
     onBtnDestroyClick();
   } else {
